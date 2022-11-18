@@ -9,6 +9,10 @@
         Numofpass = 0
         Numberofstation = 0
 
+
+
+
+
         Console.Write("ENTER THE STATION OF DEPARTURE: ")
         stationfrom = Console.ReadLine()
         If stationfrom > 5 And stationfrom < 0 Then
@@ -22,6 +26,14 @@
 
         Console.Write("ENTER THE NUMBER OF PASSENGERS: ")
         Numofpass = Console.ReadLine()
+
+        If stationfrom > stationto Then
+            Numberofstation = stationfrom - stationto
+
+        ElseIf stationto > stationfrom Then
+            Numberofstation = stationto - stationfrom
+
+        End If
 
 
 
@@ -38,7 +50,7 @@
 
 
 
-        Fare = Totalfare / 2
+        Fare = Totalfare / Numofpass
 
         Console.WriteLine("fare each person: " & Fare)
         Console.WriteLine("total fare is: " & Totalfare)
