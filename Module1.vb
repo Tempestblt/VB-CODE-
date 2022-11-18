@@ -16,13 +16,18 @@
         Console.Write("ENTER THE STATION OF DEPARTURE: ")
         stationfrom = Console.ReadLine()
         If stationfrom > 5 And stationfrom < 0 Then
-            Console.Write("PLEASE ENTER VALID TRAIN STATION: ")
+            Console.Write("PLEASE ENTER VALID DEPARTURE TRAIN STATION: ")
 
 
         End If
 
         Console.Write("ENTER THE STATION OF ARRIVAL: ")
         stationto = Console.ReadLine()
+
+        If stationto > 5 And stationto < 0 Then
+            Console.Write("PLEASE ENTER VALID ARRIVAL TRAIN STATION: ")
+        End If
+
 
         Console.Write("ENTER THE NUMBER OF PASSENGERS: ")
         Numofpass = Console.ReadLine()
