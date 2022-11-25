@@ -45,7 +45,8 @@
             Thirspace = InStr(secspace + 1, stri2, " ")
             FFW = Mid(stri2, Thirspace + 1, 1)
 
-
+        ElseIf numbofwords > 5 Then
+            Console.Write("PLEASE ENTER YOU CORRECT NAME, NO PERSON HAVE 5 WORDS IN THEIR NAME")
         End If
 
 
