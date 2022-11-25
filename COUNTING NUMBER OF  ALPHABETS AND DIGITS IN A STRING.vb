@@ -1,12 +1,10 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim stri1, number As String
-        Dim i, alphacount, Numbercount, A, B As Integer
+        Dim stri1, stri2, D As String
+        Dim i, alphacount, A, B, numbercount As Integer
 
-
-
-        Dim character As Char
+        Dim E As Char
 
 
 
@@ -15,19 +13,21 @@
 
 
 
-
-        For i = 1 To Len(stri1)
-            character = Mid(stri1, i, 1)
-            If A =  (character, "qwertyuiopasdfghjklzxcvbnm") > 0 Then
+        stri2 = LCase(stri1)
+        For i = 1 To Len(stri2)
+            E = Mid(stri2, i, 1)
+            A = InStr(E, "qwertyuiopasdfghjklzxcvbnm")
+            If A <> 0 Then
                 alphacount = alphacount + 1
             End If
 
         Next
 
-        For i = 1 To Len(stri1)
-            number = Mid(stri1 , i , 1)
-            If B = InStr(number, "123456789") > 0 Then
-                Numbercount = Numbercount + 1
+        For i = 1 To Len(stri2)
+            D = Mid(stri2, i, 1)
+            B = InStr(D, "123456789")
+            If B > 0 Then
+                numbercount = numbercount + 1
 
             End If
 
