@@ -2,8 +2,8 @@
 
     Sub Main()
         Dim stri1, stri2 As String
-        Dim space, numbofwords, secspace As Integer
-        Dim FW, SW, TW As Char
+        Dim space, numbofwords, secspace, Thirspace As Integer
+        Dim FW, SW, TW, FFW As Char
 
 
 
@@ -32,10 +32,24 @@
 
             secspace = InStr(space + 1, stri2, " ")
             TW = Mid(stri2, secspace + 1, 1)
+
+        ElseIf numbofwords = 4 Then
+            FW = Left(stri2, 1)
+
+            space = InStr(stri2, " ")
+            SW = Mid(stri2, space + 1, 1)
+
+            secspace = InStr(space + 1, stri2, " ")
+            TW = Mid(stri2, secspace + 1, 1)
+
+            Thirspace = InStr(secspace + 1, stri2, " ")
+            FFW = Mid(stri2, Thirspace + 1, 1)
+
+
         End If
 
 
-        Console.Write(" THE ABBREVIATED VERSION IS: " & FW & SW & TW)
+        Console.Write(" THE ABBREVIATED VERSION IS: " & FW & SW & TW & FFW)
 
         Console.ReadKey()
     End Sub
