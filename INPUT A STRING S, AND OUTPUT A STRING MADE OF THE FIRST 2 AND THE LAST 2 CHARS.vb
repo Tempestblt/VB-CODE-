@@ -6,7 +6,7 @@
 
         Dim Str1, Str2, STRI4 As String
         Dim Char1, A, B, C, D As Char
-        Dim i As Integer
+        Dim i, x As Integer
 
 
         Str1 = ""
@@ -19,11 +19,18 @@
         Console.Write("Enter string to process: ")
         Str1 = Console.ReadLine
 
+        If Len(Str1) <= 2 Then
+            Console.Write(" THE RESULT IS: " & Str1)
+        End If
+
+
+        x = InStr(Str1, " ")
+
         A = Mid(Str1, 1, 1)
         B = Mid(Str1, 2, 1)
 
 
-        For i = Len(Str1) To 1 Step -1
+        For i = (x - 1) To 1 Step -1
             Char1 = Mid(Str1, i, 1)
             Str2 = Str2 & Char1
         Next
