@@ -13,26 +13,31 @@
         str6 = " "
 
         Const ALPHA = "ING"
+        Const ALPHA1 = " "
 
-        str1 = InputBox("PLEASE ENTER YOUR STRING")
+        Console.Write("PLEASE ENTER YOUR  STRING: ")
+        str1 = Console.ReadLine
 
         str1 = UCase(str1)
 
         If Len(str1) < 3 Then
-            MsgBox("THE RESULTS  ARE: " & str1)
+            Console.WriteLine("THE RESULTS  ARE: " & str1)
 
         End If
 
         If Len(str1) = 3 Then
             str2 = str1 & ALPHA
-            MsgBox("THE RESULT ARE: " & str2)
+            Console.WriteLine("THE RESULT  ARE: " & str2)
         End If
 
 
         If Len(str1) > 3 Then
             For i = Len(str1) To 1 Step -1
                 A = Mid(str1, i, 1)
-                str3 = str3 & A
+                If A <> ALPHA1 Then
+                    str3 = str3 & A
+                End If
+
 
             Next
 
@@ -44,7 +49,7 @@
             Next
 
             If z < 3 Then
-                MsgBox("THE RESULTS  ARE: " & str1)
+                Console.WriteLine("THE RESULTS  ARE: " & str1)
 
             End If
         End If
@@ -64,7 +69,7 @@
 
             str5 = str5 & "LY"
 
-            MsgBox("THE RESULTS  ARE: " & str5)
+            Console.WriteLine("THE RESULTS  ARE: " & str5)
 
         End If
 
